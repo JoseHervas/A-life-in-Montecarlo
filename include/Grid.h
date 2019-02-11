@@ -9,6 +9,7 @@ class Grid {
 		int Height, Width;
 		vector<vector<Cell>> matrix;
 		Grid(int Height, int Width);
+		bool random_bool();
 		Cell GetCell(int x, int y);
 		vector<Cell> GetAdjacentCells(int x, int y);
 	};

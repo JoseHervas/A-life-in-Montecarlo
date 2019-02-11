@@ -7,13 +7,18 @@
 
 using namespace std;
 
+bool Grid::random_bool() {
+	static const int shift = static_cast<int>(std::log2(RAND_MAX));
+	return (rand() >> shift) & 1;
+}
+
 Grid::Grid(int Height, int Width) {
 	Grid::Height = Height;
 	Grid::Width = Width;
 	for (int x = 0; x < Width; x++) {
 		vector<Cell> row;
 		for (int y = 0; y < Height; y++) {
-			row.push_back(Cell(3 < y && y < 8 ? true : false));
+			row.push_back(Cell(random_bool()));
 		}
 		matrix.push_back(row);
 	}
