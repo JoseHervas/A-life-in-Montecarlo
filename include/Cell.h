@@ -1,6 +1,8 @@
 #pragma once
 #include <vector> 
 
+using namespace std;
+
 class Cell {
 	public:
 		bool NewState, CurrentState;

@@ -6,7 +6,6 @@
 class GridUpdater {
 	public:
 		int time;
-		Grid universe;
+		Grid Move1(Grid universe);
 		GridUpdater();
-		void Move1(Grid universe);
 };

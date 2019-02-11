@@ -1,9 +1,10 @@
 #include "../include/pch.h"
 #include "../include/Cell.h"
 #include <vector> 
+#include <iostream>
+#include <sstream>
 
 using namespace std;
-
 
 Cell::Cell(bool InitialState)
 {
@@ -24,10 +25,11 @@ void Cell::Calculate(vector<Cell> adjacent)
 			// they live only if there is exactly three. 
 			NewState = CurrentState || count == 3;
 		}
-	}
+}
 
 void Cell::Update()
 {
 	CurrentState = NewState;
+
 }
 

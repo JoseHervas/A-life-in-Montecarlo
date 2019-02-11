@@ -2,17 +2,18 @@
 #include "../include/Grid.h"
 #include "../include/Cell.h"
 #include <vector> 
+#include <iostream>
+#include <sstream>
 
 using namespace std;
 
 Grid::Grid(int Height, int Width) {
-	Height = Height;
-	Width = Width;
+	Grid::Height = Height;
+	Grid::Width = Width;
 	for (int x = 0; x < Width; x++) {
 		vector<Cell> row;
 		for (int y = 0; y < Height; y++) {
-			Cell newCell(false);
-			row.push_back(newCell);
+			row.push_back(Cell(3 < y && y < 8 ? true : false));
 		}
 		matrix.push_back(row);
 	}
